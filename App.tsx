@@ -14,6 +14,7 @@ const CaseManager = React.lazy(() => import('./components/CaseManager'));
 const ClientManager = React.lazy(() => import('./components/ClientManager'));
 const DocManager = React.lazy(() => import('./components/DocManager'));
 const FinanceManager = React.lazy(() => import('./components/FinanceManager'));
+const Settings = React.lazy(() => import('./components/Settings'));
 
 const LoadingFallback = () => (
   <div className="h-full flex items-center justify-center">
@@ -60,6 +61,7 @@ const App: React.FC = () => {
       case 'clients': return <ClientManager />;
       case 'files': return <DocManager />;
       case 'finance': return <FinanceManager />;
+      case 'settings': return <Settings />;
       default: return <Dashboard />;
     }
   };

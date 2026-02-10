@@ -46,10 +46,14 @@ const Sidebar: React.FC<SidebarProps> = ({ activeTab, setActiveTab }) => {
 
       <div className="p-4 border-t border-slate-800 bg-slate-900/50">
         <button
-          onClick={() => alert('Página de configurações em desenvolvimento')}
-          className="w-full flex items-center gap-3 px-4 py-3 rounded-lg hover:bg-slate-800 transition-colors text-sm font-medium"
+          onClick={() => setActiveTab('settings')}
+          className={`w-full flex items-center gap-3 px-4 py-3 rounded-lg transition-colors text-sm font-medium
+            ${activeTab === 'settings'
+              ? 'bg-indigo-600 text-white shadow-[0_0_20px_rgba(79,70,229,0.3)]'
+              : 'hover:bg-slate-800 text-slate-300'
+            }`}
         >
-          <Settings size={20} className="text-slate-400" />
+          <Settings size={20} className={activeTab === 'settings' ? 'text-white' : 'text-slate-400'} />
           Configurações
         </button>
         <div className="mt-4 flex items-center gap-3 px-4 py-2 rounded-lg bg-slate-800/50 border border-slate-800">
