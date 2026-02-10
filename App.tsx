@@ -68,11 +68,11 @@ const App: React.FC = () => {
 
   const getPageTitle = () => {
     const titles: Record<string, string> = {
-      dashboard: 'Legal Command Center',
-      documents: 'Legal AI Writer',
+      dashboard: 'Painel de Controle Jurídico',
+      documents: 'Redator Jurídico IA',
       processes: 'Gestão de Processos',
       clients: 'CRM Jurídico',
-      files: 'Legal Document Cloud',
+      files: 'Nuvem de Documentos',
       finance: 'Sistema Financeiro Integrado'
     };
     return titles[activeTab] || 'Dashboard';
@@ -134,7 +134,7 @@ const App: React.FC = () => {
                   }`}
               >
                 <Bot size={18} className={isChatOpen ? 'text-white' : 'text-indigo-600'} />
-                <span>AI Assistant</span>
+                <span>Assistente IA</span>
               </button>
               <button
                 onClick={signOut}

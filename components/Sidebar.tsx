@@ -8,11 +8,11 @@ interface SidebarProps {
 
 const Sidebar: React.FC<SidebarProps> = ({ activeTab, setActiveTab }) => {
   const menuItems = [
-    { id: 'dashboard', label: 'Command Center', icon: <LayoutDashboard size={20} /> },
+    { id: 'dashboard', label: 'Painel de Controle', icon: <LayoutDashboard size={20} /> },
     { id: 'processes', label: 'Gestão de Processos', icon: <Scale size={20} /> },
     { id: 'finance', label: 'Financeiro', icon: <DollarSign size={20} /> },
-    { id: 'documents', label: 'Legal AI Writer', icon: <FileText size={20} /> },
-    { id: 'files', label: 'Document Cloud', icon: <Files size={20} /> },
+    { id: 'documents', label: 'Redator Jurídico IA', icon: <FileText size={20} /> },
+    { id: 'files', label: 'Nuvem de Documentos', icon: <Files size={20} /> },
     { id: 'clients', label: 'CRM Jurídico', icon: <Users size={20} /> },
   ];
 
