@@ -5,19 +5,9 @@ import { useLocalStorage } from '../hooks/useLocalStorage';
 import { useToast, ToastContainer } from './Toast';
 import EditCaseModal from './modals/EditCaseModal';
 
-const initialCases: Case[] = [
-  { id: '1', number: '0001234-55.2023.8.26.0100', title: 'Ação de Cobrança - Silva vs. Souza', client: 'João da Silva', court: 'TJSP - 14ª Vara Cível', status: CaseStatus.ACTIVE, nextDeadline: '2023-11-15', value: 45000 },
-  { id: '2', number: '0054321-11.2023.8.26.0000', title: 'Divórcio Litigioso - Família Oliveira', client: 'Maria Oliveira', court: 'TJSP - 2ª Vara Família', status: CaseStatus.PENDING, nextDeadline: '2023-11-20', value: 0 },
-  { id: '3', number: '1002003-99.2022.5.02.0001', title: 'Reclamação Trabalhista - Costa vs Tech Ltda', client: 'Pedro Costa', court: 'TRT-2', status: CaseStatus.ACTIVE, nextDeadline: '2023-11-05', value: 120000 },
-  { id: '4', number: '5552221-33.2021.4.03.6100', title: 'Mandado de Segurança - Tributário', client: 'Tech Solutions SA', court: 'TRF-3', status: CaseStatus.SUSPENDED, nextDeadline: '—', value: 500000 },
-  { id: '5', number: '0000001-22.2020.8.26.0500', title: 'Inventário - Espólio Santos', client: 'Ana Santos', court: 'TJSP', status: CaseStatus.ARCHIVED, nextDeadline: '—', value: 2500000 },
-];
+const initialCases: Case[] = [];
 
-const initialTasks: Task[] = [
-  { id: '101', caseId: '1', description: 'Protocolar réplica', deadline: '2023-11-14', assignee: 'Dr. Carlos', completed: false, priority: 'Alta', billable: true, value: 1500 },
-  { id: '102', caseId: '1', description: 'Reunião com cliente', deadline: '2023-11-10', assignee: 'Dra. Ana', completed: true, priority: 'Média' },
-  { id: '103', caseId: '3', description: 'Calcular verbas rescisórias', deadline: '2023-11-04', assignee: 'Dr. Carlos', completed: false, priority: 'Alta', billable: true, value: 800 },
-];
+const initialTasks: Task[] = [];
 
 const CaseManager: React.FC = () => {
   const [cases, setCases] = useLocalStorage<Case[]>('lexflow_cases', initialCases);

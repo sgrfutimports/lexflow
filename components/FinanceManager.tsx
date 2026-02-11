@@ -6,13 +6,7 @@ import { useLocalStorage } from '../hooks/useLocalStorage';
 import { useToast, ToastContainer } from './Toast';
 import { BarChart, Bar, XAxis, YAxis, Tooltip, ResponsiveContainer, AreaChart, Area, CartesianGrid } from 'recharts';
 
-const initialTransactions: FinancialTransaction[] = [
-  { id: '1', type: 'Receita', category: 'Honorários Contratuais', description: 'Entrada - Ação Silva vs Souza', amount: 15000, date: '2023-10-25', status: 'Pago', caseId: '1' },
-  { id: '2', type: 'Despesa', category: 'Custas', description: 'Guia de Preparo - Recurso 4432', amount: 890.50, date: '2023-10-24', status: 'Pago', caseId: '2' },
-  { id: '3', type: 'Receita', category: 'Honorários Sucumbenciais', description: 'Proc. 1002003-99', amount: 4500, date: '2023-10-20', status: 'Pendente' },
-  { id: '4', type: 'Despesa', category: 'Operacional', description: 'Aluguel Escritório', amount: 3500, date: '2023-10-05', status: 'Pago' },
-  { id: '5', type: 'Receita', category: 'Honorários Contratuais', description: 'Mensalidade - Tech Solutions', amount: 5000, date: '2023-10-01', status: 'Atrasado' },
-];
+const initialTransactions: FinancialTransaction[] = [];
 
 const cashFlowData = [
   { name: 'Jan', entrada: 25000, saida: 12000 },

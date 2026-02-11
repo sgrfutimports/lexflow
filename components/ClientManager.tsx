@@ -4,11 +4,7 @@ import { UserPlus, Mail, Phone, FileText, X, Briefcase } from 'lucide-react';
 import { useLocalStorage } from '../hooks/useLocalStorage';
 import { useToast, ToastContainer } from './Toast';
 
-const initialClients: Client[] = [
-  { id: '1', name: 'João da Silva', type: 'PF', document: '123.456.789-00', email: 'joao@email.com', phone: '(11) 99999-8888', activeCases: 2 },
-  { id: '2', name: 'Tech Solutions SA', type: 'PJ', document: '12.345.678/0001-99', email: 'juridico@techsolutions.com', phone: '(11) 3333-4444', activeCases: 5 },
-  { id: '3', name: 'Maria Oliveira', type: 'PF', document: '987.654.321-11', email: 'maria.oliveira@email.com', phone: '(21) 98888-7777', activeCases: 1 },
-];
+const initialClients: Client[] = [];
 
 const ClientManager: React.FC = () => {
   const [clients, setClients] = useLocalStorage<Client[]>('lexflow_clients', initialClients);
